@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --vd-dblue: hsl(229, 23%, 23%);
+  --dg-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+
+  --reg-fs: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Kumbh Sans;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--dark-cyan);
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+main::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(./images/bg-pattern-top.svg);
+  background-repeat: no-repeat;
+  background-size: 720px;
+  background-position: -160px -400px;
+  z-index: -1;
+}
+@media (max-width: 576px) {
+  main::before {
+    background-size: 600px;
+    background-position: -340px -274px;
+  }
+}
+
+main::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url(./images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-size: 720px;
+  background-position: 680px 300px;
+  z-index: -1;
+}
+@media (max-width: 576px) {
+  main::after {
+    background-size: 600px;
+    background-position: 200px 440px;
+  }
+}
+
+.component {
+  width: 350px;
+  background-color: #fff;
+  border-radius: 13px;
+  overflow: hidden;
+  box-shadow: 0px 20px 46px -20px var(--vd-dblue);
+}
+@media (max-width: 576px) {
+  .component {
+    width: 300px;
+  }
+}
+
+.component .info {
+  text-align: center;
+}
+
+.component .avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.component .avatar img {
+  border-radius: 50%;
+  margin-top: calc(-110px / 2);
+  border: 4px solid #fff;
+}
+
+.component .avatar .person {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 23px 0 10px;
+}
+
+.component .avatar .person h1 {
+  font-size: 17px;
+  margin: 0;
+}
+
+.component .avatar .person h2 {
+  font-size: 18px;
+  color: var(--dark-gray);
+  font-weight: 400;
+  margin: 0;
+}
+
+.component .avatar p {
+  margin: 0 0 27px;
+  color: var(--dark-gray);
+}
+
+.component .stats {
+  border-top: 1px solid var(--dark-gray);
+}
+
+ul {
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+  list-style: none;
+  width: 100%;
+}
+
+ul li {
+  text-align: center;
+}
+
+ul li h3 {
+  margin: 0;
+}
+
+ul li p {
+  margin: 0;
+  font-size: 11px;
+  color: var(--dg-blue);
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+
+footer {
+  text-align: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+footer a {
+  color: royalblue;
+  font-size: 18px;
+  text-decoration: underline dotted;
+}
